@@ -1,0 +1,15 @@
+.container-list {
+    border: solid 1px #dee2e6;
+    height: 80vh;
+    position: relative;
+    top: 20px;
+    margin: 0 auto;
+    width: 80vw;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.container-table {
+    height: 95%;
+    overflow: auto;
+}
