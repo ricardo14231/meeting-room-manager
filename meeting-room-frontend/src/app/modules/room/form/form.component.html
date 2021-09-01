@@ -1,0 +1,25 @@
+<div class="container-form">
+    <form autocomplete="off" novalidate [formGroup]="roomForm">
+        <div class="form-group">
+            <label for="name">Nome</label>
+            <input type="email" class="form-control" id="nameMeeting" placeholder="Nome da sala" formControlName="nameMeeting">
+        </div>
+        <div class="form-group">
+            <label for="date">Data</label>
+            <input type="email" class="form-control" id="date" placeholder="Data da reunião" formControlName="date">
+        </div>
+        <div class="form-group">
+            <label for="startHour">Hora de início</label>
+            <input type="email" class="form-control" id="startHour" placeholder="Hora de início" formControlName="startHour">
+        </div>
+        <div class="form-group">
+            <label for="endHour">Hora de termíno</label>
+            <input type="email" class="form-control" id="endHour" placeholder="Hora de termíno" formControlName="endHour">
+        </div>
+    
+        <div class="action">
+            <button type="reset" class="btn btn-danger" (click)="cancelForm()">Cancelar</button>
+            <button type="submit" class="btn btn-success" (click)="onSave()">Salvar</button>
+        </div>
+    </form>
+</div>

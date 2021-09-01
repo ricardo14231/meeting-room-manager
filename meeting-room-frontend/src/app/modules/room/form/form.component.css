@@ -1,0 +1,37 @@
+.container-form {
+    position: relative;
+    top: 20px;
+    margin: 0 auto;
+    padding: 10px;
+    height: 45vh;
+    min-height: 45vh;    
+    width: 32vw;
+    min-width: 32vw;
+    border: solid 1px #dee2e6;
+    border-radius: 4px;
+}
+
+form {
+    height: 100%;
+}
+
+form * label{
+    margin: 20px 0px 5px;
+}
+
+#name {
+    width: 30vw;
+    min-width: 30vw;
+}
+
+#date, #startHour, #endHour {
+    width: 15vw;
+    min-width: 15vw;
+}
+
+.action {
+    bottom: 0;
+    position: absolute;
+    right: 0;
+    margin: 10px 0px;
+}

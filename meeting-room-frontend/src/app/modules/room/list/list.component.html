@@ -1,0 +1,32 @@
+<div class="container-list">
+    <h4>Lista de salas</h4>
+    <div class="container-table">
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Data</th>
+                    <th scope="col">Hora de início</th>
+                    <th scope="col">Hora de termíno</th>
+                    <th scope="col">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let meeting of meetings; let i = index">
+                    <th scope="row"> {{ meeting.id }} </th>
+                    <td> {{ meeting.nameMeeting }} </td>
+                    <td> {{ meeting.date | date : "dd/MM/yyyy"}} </td>
+                    <td> {{ meeting.startHour }}</td>
+                    <td> {{ meeting.endHour }} </td>
+                    <td class="action">
+                        <button type="button" class="btn btn-danger btn-sm" (click)="deleteRoom(meeting.id)">Excluir</button>
+                        <button type="button" class="btn btn-success btn-sm" (click)="editRoom(i)">Editar</button>
+                        <button type="button" class="btn btn-primary btn-sm" (click)="detailsRoom(meeting.id)">Detalhes</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

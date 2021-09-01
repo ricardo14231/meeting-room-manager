@@ -1,0 +1,9 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+body {
+    height: 100vh;
+}
+
+.action button {
+    margin-right: 10px;
+}
