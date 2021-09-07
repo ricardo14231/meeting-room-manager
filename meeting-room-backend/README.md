@@ -31,7 +31,7 @@ Método | Endpoint
  DELETE| http://localhost:8080/meeting/delete/{id}
 
 
-## Modelo Json para criar uma sala de reuniões:
+## Modelo Json para criar um agendamento:
 Para adicionar uma nova reunião, envie uma requisição, método POST, para o endpoint http://localhost:8080/meeting/create com o modelo a seguir:
 ``` JSON
 {
