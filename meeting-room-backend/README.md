@@ -11,7 +11,7 @@ Foram realizados os testes na classe de serviço e a documentação da API com o
 
 Java: 11 ou superior.  
 Maven: 3.8.1  
-JUnit 5.
+JUnit 5.   
 Swagger: 3.0.0.
 
 ## Para executar a aplicação:
