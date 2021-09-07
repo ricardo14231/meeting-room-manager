@@ -1,4 +1,4 @@
-# Desenvolvimento da API para agendamentos de uma sala para reuniões.
+# Desenvolvimento da API para agendamentos da sala para reuniões.
 
 # Sobre o projeto 
 
