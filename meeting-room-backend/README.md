@@ -10,7 +10,7 @@ Foram realizados os testes na classe de serviço e a documentação da API com o
 ## Pré-requisitos para executar o projeto:
 
 Java: 11 ou superior.  
-Maven: 3.8.1  
+Maven: 3.8.1.   
 JUnit 5.   
 Swagger: 3.0.0.
 
