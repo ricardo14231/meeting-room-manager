@@ -6,6 +6,7 @@ import dio.meeting.room.mapper.MeetingRoomMapper;
 import dio.meeting.room.message.MessageResponse;
 import dio.meeting.room.model.MeetingRoomModel;
 import dio.meeting.room.repository.MeetingRoomRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,12 +14,12 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
+@RequiredArgsConstructor(onConstructor = @__(@Autowired))
 public class MeetingRoomService {
 
-    private MeetingRoomMapper meetingRoomMapper = MeetingRoomMapper.INSTANCE;
+    private final MeetingRoomMapper meetingRoomMapper = MeetingRoomMapper.INSTANCE;
 
-    @Autowired
-    private MeetingRoomRepository meetingRoomRepository;
+    private final MeetingRoomRepository meetingRoomRepository;
 
     public String createMeetingRoom(MeetingRoomDTO meetingRoomDTO) {
         MeetingRoomModel meetingToSave = meetingRoomMapper.toModel(meetingRoomDTO);
