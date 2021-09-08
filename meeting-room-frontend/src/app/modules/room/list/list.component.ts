@@ -21,7 +21,7 @@ export class ListComponent implements OnInit {
   ngOnInit(): void {    
     this.roomService.listAllMeetingRoom().subscribe({
       next: response => this.meetings = response,
-      error: err => console.log(err)     
+      error: () => alert("Não foi possível acessar a API.")   
     })
   }
 
@@ -32,25 +32,20 @@ export class ListComponent implements OnInit {
 
   deleteRoom(index: number): void {
     this.roomService.deleteMeetingRoom(index).subscribe({
-      next: (ss) => {
-        this.reloadData()
-        console.log(ss)
-
-      },
-      error: err => console.log(err)
+      next: () => this.reloadData(),
+      error: err => alert(err?.error)
     });
   }
 
   detailsRoom(index: number): void {
-
+    this.roomService.roomDetails = this.meetings[index];
+    this.router.navigate(['/room/details']);
   }
 
   private reloadData(): void {
     
     this.roomService.listAllMeetingRoom().subscribe(
       res => {
-        console.log(res)
-
         this.meetings = res
         this.changeDetectorRefs.detectChanges();
       })

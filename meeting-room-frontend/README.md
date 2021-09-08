@@ -1,27 +1,33 @@
-# MeentingRoom
+# Desenvolvimento da aplicação para agendamentos de salas para reuniões.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.1.
+# Sobre o projeto 
 
-## Development server
+Este projeto foi desenvolvido durante o Bootcamp full stack Santander, oferecida pela plataforma Digital Innovation One.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Um simples cadastro e listagem de salas para reuniões.
 
-## Code scaffolding
+## Pré-requisitos para executar o projeto:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Angular CLI: 10.   
+Node: 14.10.   
+NPM: 6.14.   
 
-## Build
+## Para executar a aplicação:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+É necessário que a API da aplicação, disponível em `https://github.com/ricardo14231/meeting-room-manager/tree/master/meeting-room-backend`, esteja em execução.
 
-## Running unit tests
+No diretório do projeto execute os seguintes comandos no terminal:   
+`npm install`   
+`npm start`   
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+A aplicação estará disponível na url: `http:localhost:4200`   
 
-## Running end-to-end tests
+## Autor:
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Ricardo Farias.
 
-## Further help
+https://www.linkedin.com/in/ricardo-farias-04069359/
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Licença:
+
+[![NPM](http://img.shields.io/npm/l/react)](https://github.com/ricardo14231/meeting-room-manager/blob/master/LICENSE)

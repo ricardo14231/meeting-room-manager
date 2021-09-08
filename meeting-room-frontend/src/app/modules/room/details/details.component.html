@@ -1,0 +1,26 @@
+<div class="container-room-data">
+    <div class="title">
+        <label>Detalhes da sala</label>
+    </div>
+    <div class="room-details">
+        <div>
+            <label>Nome:</label>
+            <span> {{room?.nameMeeting}} </span>
+        </div>
+        <div>
+            <label>Data:</label>
+            <span> {{room?.date}} </span>
+        </div>
+        <div>
+            <label>Hora de início:</label>
+            <span> {{room?.startHour}} </span>
+        </div>
+        <div>
+            <label>Hora de termíno:</label>
+            <span> {{room?.endHour}} </span>
+        </div>
+        <div class="form action">
+            <button type="button" class="btn btn-primary" routerLink="/room">Lista de salas</button>
+        </div>
+    </div>
+</div>

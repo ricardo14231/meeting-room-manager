@@ -4,6 +4,34 @@ body {
     height: 100vh;
 }
 
+.title {
+    border-bottom: solid 1px #c8c88c;
+}
+
+.title label {
+    font-size: 1.5rem;
+}
+
 .action button {
     margin-right: 10px;
+}
+
+.form.action {
+    bottom: 0;
+    position: absolute;
+    right: 0;
+    margin: 10px 0px;
+}
+
+.container-room-data {
+    position: relative;
+    top: 20px;
+    margin: 0 auto;
+    padding: 10px;
+    height: 50vh;
+    min-height: 45vh;    
+    width: 32vw;
+    min-width: 32vw;
+    border: solid 1px #dee2e6;
+    border-radius: 4px;
 }

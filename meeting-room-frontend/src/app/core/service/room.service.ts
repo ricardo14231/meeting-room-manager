@@ -1,7 +1,7 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Output } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { MeetingRoom } from 'src/app/shared/models/meeting.model';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -11,14 +11,16 @@ export class RoomService {
   private readonly API = "http://localhost:8080/meeting";
 
   private _meetingRoom: MeetingRoom;
+  private _roomDetails: MeetingRoom;
   private _edit: boolean = false;
+  @Output() responseOnSave = new Subject<any>();
 
   constructor(
     private httpClient: HttpClient
   ) { }
 
   private createMeetingRoom(room: MeetingRoom): Observable<Object> {
-    return this.httpClient.post(`${this.API}/create`, room);
+    return this.httpClient.post(`${this.API}/create`, room, { responseType: 'text' });
   }
 
   findByIdMeetingRoom(id: number): Observable<MeetingRoom> {
@@ -30,7 +32,7 @@ export class RoomService {
   }
 
   private updateMeetingRoom(id: number, room: MeetingRoom): Observable<Object> {
-    return this.httpClient.put(`${this.API}/update/${id}`, room);
+    return this.httpClient.put(`${this.API}/update/${id}`, room, { responseType: 'text' });
   }
 
   deleteMeetingRoom(id: number): Observable<Object> {
@@ -52,18 +54,31 @@ export class RoomService {
 
   set edit(value: boolean) {
     this._edit = value;
-  } 
+  }
 
-  onSave(room: MeetingRoom) {
+  get roomDetails(): MeetingRoom {
+    return this._roomDetails;
+  }
+
+  set roomDetails(value: MeetingRoom) {
+    this._roomDetails = value;
+  }
+
+  onSave(room: MeetingRoom): void {
     if(this._edit) {
       this.updateMeetingRoom(room.id, room).subscribe({
-        next: () => console.log("Room Atualizada!"),
-        error: err => console.log(err)
+        next: response => {
+          this.responseOnSave.next(response);
+          this._edit = false;
+        },
+        error: err => this.responseOnSave.error(err)
       })
     } else {
       this.createMeetingRoom(room).subscribe({
-        next: () => console.log("Room Salva!"),
-        error: err => console.log(err)
+        next: response => {
+          this.responseOnSave.next(response);
+        },
+        error: err => this.responseOnSave.error(err)
       })
     }
   }

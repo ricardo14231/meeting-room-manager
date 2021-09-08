@@ -12,6 +12,7 @@ import { FooterComponent } from './modules/footer/footer.component';
 import { NotFoundComponent } from './modules/page-not-found/not-found.component';
 import { MainComponent } from './modules/room/main/main.component';
 import { ListComponent } from './modules/room/list/list.component';
+import { DetailsComponent } from './modules/room/details/details.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ListComponent } from './modules/room/list/list.component';
     FooterComponent,
     NotFoundComponent,
     MainComponent,
-    ListComponent
+    ListComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,

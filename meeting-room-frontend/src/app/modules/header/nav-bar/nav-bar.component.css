@@ -1,0 +1,13 @@
+ul li {
+    background-color: #FFF;
+    margin-left: 10px;
+    border-radius: 4px;
+}
+
+li a {
+    cursor: pointer;
+}
+
+nav {
+    background-color: #BDECB6;
+}
