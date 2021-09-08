@@ -1,4 +1,4 @@
-# Desenvolvimento da API para agendamentos de uma sala para reuniões.
+# Desenvolvimento da API para agendamentos da sala para reuniões.
 
 # Sobre o projeto 
 
@@ -10,8 +10,8 @@ Foram realizados os testes na classe de serviço e a documentação da API com o
 ## Pré-requisitos para executar o projeto:
 
 Java: 11 ou superior.  
-Maven: 3.8.1  
-JUnit 5.
+Maven: 3.8.1.   
+JUnit 5.   
 Swagger: 3.0.0.
 
 ## Para executar a aplicação:
@@ -31,7 +31,7 @@ Método | Endpoint
  DELETE| http://localhost:8080/meeting/delete/{id}
 
 
-## Modelo Json para criar uma sala de reuniões:
+## Modelo Json para criar um agendamento:
 Para adicionar uma nova reunião, envie uma requisição, método POST, para o endpoint http://localhost:8080/meeting/create com o modelo a seguir:
 ``` JSON
 {
